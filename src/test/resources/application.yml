@@ -1,0 +1,6 @@
+sftp-ingest:
+  host: localhost
+  username: user
+  password: password
+  allowUnknownKeys: true
+  remoteDir: /
