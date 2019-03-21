@@ -44,6 +44,9 @@ public class SftpFileIngesterApplication {
 			InputStreamReader isr = new InputStreamReader(is);
 			BufferedReader br = new BufferedReader(isr);
 			String line;
+			//iterate and process 1-to-many lines here.  
+			//when you have an object you can send downstream,
+			//send it via output.send
 			while ((line = br.readLine()) != null) {
 				output.send(MessageBuilder.withPayload(line).build());
 			}
